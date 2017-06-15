@@ -8,9 +8,13 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" v-if="username == null">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" v-else>
+        <li><a href="#">Hello {{username}}</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -21,7 +25,13 @@
 export default {
   name: 'nav-bar',
   data() {
-    return {}
+    return {
+      username: localStorage.getItem('username') || null,
+    }
+  },
+  computed: {
+    userName () {
+    }
   }
 }
 </script>

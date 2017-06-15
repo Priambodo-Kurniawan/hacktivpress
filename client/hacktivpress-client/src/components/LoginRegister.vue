@@ -83,7 +83,7 @@ export default {
       let data = {}
       data.email = this.$refs.logEmail.value || null
       data.password = this.$refs.logPassword.value || null
-
+      console.log(data);
       let self = this
       axios.post('http://localhost:5000/api/users/login', data)
       .then((response) => {
@@ -96,9 +96,12 @@ export default {
             self.logErrorMsg = response.data.err
             setTimeout(function(){ self.loginError = false }, 2000)
           } else {
-            console.log(response.data);
-            localStorage.setItem('token', response.data)
-            window.location = "/home";
+            localStorage.setItem('token', response.data.token)
+            localStorage.setItem('username', response.data.username)
+            localStorage.setItem('email', response.data.email)
+            localStorage.setItem('user_id', response.data.id)
+            console.log('berhasil login');
+            window.location.href = '/#/home'
           }
         }
       })
@@ -109,7 +112,7 @@ export default {
       data.email = this.$refs.regEmail.value || null
       data.username = this.$refs.regUsername.value || null
       data.password = this.$refs.regPassword.value || null
-      
+
       let self = this
       axios.post('http://localhost:5000/api/users/signup', data)
       .then((response) => {
@@ -122,7 +125,8 @@ export default {
             self.regErrorMsg = response.data.err
           } else {
             console.log(response.data);
-            window.location = "/home";
+            alert('registration is success')
+            location.reload()
           }
         }
       })

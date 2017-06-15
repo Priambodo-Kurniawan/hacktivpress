@@ -7,7 +7,9 @@ export const store = new Vuex.Store({
   state: {
     viewArticles: true,
     showForm: false,
-    data: null
+    user_id: localStorage.getItem('user_id') || null,
+    username: localStorage.getItem('username') || null,
+    email: localStorage.getItem('email') || null
   },
   mutations: {
     getData(state){
@@ -33,9 +35,14 @@ export const store = new Vuex.Store({
     showForm(state) {
       return state.showForm
     },
-    data(state) {
-      // console.log(state.data);
-      return state.data
+    user_id(state) {
+      return state.user_id
+    },
+    username(state) {
+      return state.username
+    },
+    email(state) {
+      return state.email
     }
   }
 })

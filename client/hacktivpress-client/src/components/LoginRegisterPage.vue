@@ -2,16 +2,18 @@
   <div class="login-register-page">
     <Navbar />
     <div class="container flex center-absolute">
-
+      <LoginRegister />
     </div>
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar'
+import LoginRegister from './LoginRegister'
 export default {
   components: {
-    Navbar
+    Navbar,
+    LoginRegister
   },
   name: 'login-register-page',
   data () {
