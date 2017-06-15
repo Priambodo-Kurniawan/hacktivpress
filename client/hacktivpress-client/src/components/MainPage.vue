@@ -1,14 +1,27 @@
 <template>
   <div class="main-page">
     <Navbar />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <LoginRegister />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar'
+import LoginRegister from './LoginRegister'
 export default {
   components: {
-    Navbar
+    Navbar,
+    LoginRegister
   },
   name: 'main-page',
   data () {
