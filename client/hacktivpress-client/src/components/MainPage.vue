@@ -2,7 +2,7 @@
   <div class="login-register-page">
     <Navbar />
     <div class="container flex center-absolute">
-
+      <ListArticle />
     </div>
     <NewArticle />
   </div>
@@ -11,15 +11,25 @@
 <script>
 import Navbar from './Navbar'
 import NewArticle from './NewArticle'
+import ListArticle from './ListArticle'
 export default {
   components: {
     Navbar,
-    NewArticle
+    NewArticle,
+    ListArticle
   },
   name: 'login-register-page',
   data () {
     return {
     }
+  },
+  computed: {
+    getData () {
+      return this.$store.commit('getData')
+    }
+  },
+  mounted () {
+    this.getData
   }
 }
 </script>

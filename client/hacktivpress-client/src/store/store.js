@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
+    data: null,
     viewArticles: true,
     showForm: false,
     user_id: localStorage.getItem('user_id') || null,
@@ -16,6 +17,7 @@ export const store = new Vuex.Store({
       axios.get('http://localhost:5000/api/articles')
       .then(articles => {
         state.data = articles.data
+        console.log(state.data);
       })
       .catch( err => console.log(err))
     },
@@ -43,6 +45,9 @@ export const store = new Vuex.Store({
     },
     email(state) {
       return state.email
+    },
+    data(state) {
+      return state.data
     }
   }
 })
