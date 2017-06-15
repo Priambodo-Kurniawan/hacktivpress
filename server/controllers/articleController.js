@@ -21,7 +21,7 @@ methods.getByID = (req, res) => {
 
 methods.create = (req, res) => {
   let newArticle = new Article(req.body)
-
+  console.log(req.body);
   newArticle.save()
   .then(articles => {
     res.send(articles)
