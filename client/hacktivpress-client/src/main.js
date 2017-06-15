@@ -3,6 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import jQuery from 'jquery'
+global.jQuery = jQuery
+global.$ = jQuery
+let Bootstrap = require('bootstrap')
+import 'bootstrap/dist/css/bootstrap-flatly.css'
+import { store } from './store/store'
 
 Vue.config.productionTip = false
 
@@ -10,6 +16,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
