@@ -7,10 +7,7 @@ var articleSchema = new Schema({
     type: String,
     required: [true, 'Please enter your article title']
   },
-  content: {
-    type: String,
-    required: [true, 'Please enter your article description']
-  },
+  content: String,
   image: Array,
   category: {
     type: String,

@@ -20,9 +20,9 @@ methods.getByID = (req, res) => {
 }
 
 methods.create = (req, res) => {
-  let newHouse = new Article(req.body)
+  let newArticle = new Article(req.body)
 
-  newHouse.save()
+  newArticle.save()
   .then(articles => {
     res.send(articles)
   })
