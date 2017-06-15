@@ -1,0 +1,36 @@
+{
+  "name": "server-hactivpress",
+  "version": "1.0.0",
+  "description": "server side for hacktivpress",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Priambodo-Kurniawan/hacktivpress.git"
+  },
+  "keywords": [
+    "server",
+    "cms"
+  ],
+  "author": "Priambodo-Kurniawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Priambodo-Kurniawan/hacktivpress/issues"
+  },
+  "homepage": "https://github.com/Priambodo-Kurniawan/hacktivpress#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "mongodb": "^2.2.28",
+    "mongoose": "^4.10.6",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "validator": "^7.0.0"
+  }
+}
