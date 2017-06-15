@@ -5,16 +5,16 @@ var Schema = mongoose.Schema;
 var articleSchema = new Schema({
   title: {
     type: String,
-    required: [true, 'Please enter your adds title']
+    required: [true, 'Please enter your article title']
   },
   content: {
     type: String,
-    required: [true, 'Please enter your house description']
+    required: [true, 'Please enter your article description']
   },
   image: Array,
-  city: {
+  category: {
     type: String,
-    required: [true, 'Please enter your city']
+    required: [true, 'Please enter your category']
   },
   creator: {
     type: Schema.Types.ObjectId, ref: 'User'
