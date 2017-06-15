@@ -34,10 +34,10 @@ methods.signup = (req, res) => {
   .catch(err => {
     // console.log(err.message);
     if(/username_1/.test(err.message)){
-      res.send('username already taken')
+      res.send({err: 'username already taken'})
     }
     else if(/email_1/.test(err.message)){
-      res.send('email is already registered')
+      res.send({err: 'email is already registered'})
     }
     else {
       res.send(err)
@@ -46,10 +46,10 @@ methods.signup = (req, res) => {
 }
 
 methods.login = (req, res) => {
-  var username = req.body.username;
+  var email = req.body.email;
   var password = req.body.password;
 
-  User.findOne({username: username})
+  User.findOne({email: email})
   .then(user => {
     if(user == null){
       res.send({err: 'no such user'})

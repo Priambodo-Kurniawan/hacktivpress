@@ -8,7 +8,7 @@
           <div class="form-group">
             <label for="inputEmail" class="col-lg-3 control-label">Email</label>
             <div class="col-lg-9">
-              <input type="text" class="form-control" id="inputEmail" placeholder="Email" ref="logEmail" required>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email" ref="logEmail" required>
             </div>
           </div>
           <div class="form-group">
@@ -37,7 +37,7 @@
           <div class="form-group">
             <label for="inputEmail" class="col-lg-3 control-label">Email</label>
             <div class="col-lg-9">
-              <input type="text" class="form-control" id="inputEmail" placeholder="Email" ref="regEmail" required>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email" ref="regEmail" required>
             </div>
           </div>
           <div class="form-group">
@@ -97,7 +97,8 @@ export default {
             setTimeout(function(){ self.loginError = false }, 2000)
           } else {
             console.log(response.data);
-            localStorage.set('token', response.data)
+            localStorage.setItem('token', response.data)
+            window.location = "/home";
           }
         }
       })
@@ -108,7 +109,7 @@ export default {
       data.email = this.$refs.regEmail.value || null
       data.username = this.$refs.regUsername.value || null
       data.password = this.$refs.regPassword.value || null
-
+      
       let self = this
       axios.post('http://localhost:5000/api/users/signup', data)
       .then((response) => {
@@ -121,6 +122,7 @@ export default {
             self.regErrorMsg = response.data.err
           } else {
             console.log(response.data);
+            window.location = "/home";
           }
         }
       })
