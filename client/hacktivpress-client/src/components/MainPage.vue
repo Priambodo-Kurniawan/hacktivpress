@@ -4,14 +4,17 @@
     <div class="container flex center-absolute">
 
     </div>
+    <NewArticle />
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar'
+import NewArticle from './NewArticle'
 export default {
   components: {
-    Navbar
+    Navbar,
+    NewArticle
   },
   name: 'login-register-page',
   data () {

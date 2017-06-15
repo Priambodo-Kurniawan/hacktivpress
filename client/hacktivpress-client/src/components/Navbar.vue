@@ -15,6 +15,7 @@
       <ul class="nav navbar-nav navbar-right" v-else>
         <li><a href="#">Hello {{username}}</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ArticleNew">Post Article</button></li>
       </ul>
     </div>
   </nav>
@@ -30,8 +31,6 @@ export default {
     }
   },
   computed: {
-    userName () {
-    }
   }
 }
 </script>
@@ -44,5 +43,8 @@ export default {
   nav.navbar.navbar-default {
     margin-bottom: 0px;
     border-radius: 0;
+  }
+  button.btn.btn-info.btn-lg {
+    margin-top: 10px;
   }
 </style>
