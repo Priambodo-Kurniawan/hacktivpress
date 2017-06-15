@@ -1,0 +1,22 @@
+{
+  "name": "hacktivpress",
+  "version": "1.0.0",
+  "description": "simple cms hactivpress",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Priambodo-Kurniawan/hacktivpress.git"
+  },
+  "keywords": [
+    "cms"
+  ],
+  "author": "Priambodo-Kurniawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Priambodo-Kurniawan/hacktivpress/issues"
+  },
+  "homepage": "https://github.com/Priambodo-Kurniawan/hacktivpress#readme"
+}
