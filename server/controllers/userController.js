@@ -52,7 +52,7 @@ methods.login = (req, res) => {
   User.findOne({username: username})
   .then(user => {
     if(user == null){
-      res.send('no such user')
+      res.send({err: 'no such user'})
     } else {
       bcrypt.compare(password, user.password)
       .then(result => {
@@ -60,7 +60,7 @@ methods.login = (req, res) => {
           var token = jwt.sign({id: user.id, email: user.email, username: user.username}, secret);
           res.send({'token': token});
         } else {
-          res.send("password is incorrect");
+          res.send({err: "password is incorrect"});
         }
       })
       .catch(err => console.log(err))

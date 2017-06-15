@@ -1,16 +1,8 @@
 <template>
   <div class="main-page">
     <Navbar />
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-3 col-md-6">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <LoginRegister />
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container flex center-absolute">
+      <LoginRegister />
     </div>
   </div>
 </template>
@@ -50,4 +42,12 @@ li {
 a {
   color: #42b983;
 }
+
+.center-absolute {
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+
 </style>
