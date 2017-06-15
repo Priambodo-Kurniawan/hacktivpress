@@ -3,6 +3,7 @@ var methods = {}
 
 methods.getAll = (req, res) => {
   Article.find({})
+  .populate('creator')
   .then((articles)=>{
     res.send(articles)
   })
@@ -11,6 +12,7 @@ methods.getAll = (req, res) => {
 
 methods.getByID = (req, res) => {
   Article.findById(req.params.id)
+  .populate('creator')
   .then((article)=>{
     res.send(article)
   })
