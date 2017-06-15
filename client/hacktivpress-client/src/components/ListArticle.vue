@@ -3,7 +3,7 @@
   <div v-for="article in viewData">
     <h4>Judul: {{article.title}}</h4>
     <p>{{article.content}}</p>
-    <h6>author: {{article.creator}}</h6>
+    <h6>author: {{article.creator.username}}</h6>
     <p>category: {{article.category}}</p>
   </div>
 </div>

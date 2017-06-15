@@ -79,6 +79,7 @@ export default {
           console.log(response.data);
           $('.close').trigger('click')
           alert('Article created')
+          location.reload()
         }
       })
       .catch( err => console.log(err))

@@ -1,7 +1,7 @@
 <template>
   <div class="login-register-page">
     <Navbar />
-    <div class="container flex center-absolute">
+    <div class="container">
       <ListArticle />
     </div>
     <NewArticle />
